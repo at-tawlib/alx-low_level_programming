@@ -5,18 +5,12 @@
  */
 int main(void)
 {
-char lower = 'a';
-char upper = 'A';
-while (lower <= 'z')
+int letter, n;
+
+for (letter = 97, n = 1; n < 27; letter++, n++)
 {
-putchar(lower);
-lower++;
+putchar(letter);
 }
-while (upper <= 'Z')
-{
-putchar(upper);
-upper++;
-}
-putchar('\n');
+putchar(10);
 return (0);
 }
