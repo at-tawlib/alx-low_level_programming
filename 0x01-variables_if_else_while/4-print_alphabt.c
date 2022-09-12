@@ -1,19 +1,20 @@
 #include <stdio.h>
 /**
- * main - prints alphabet in lowercase except q and except
- * Return: 0 if successful
+ * main - print lowercase alphabet except q and e
+ * we use ASCII 97-122(a - z)
+ * Return: 0 if success
  */
 int main(void)
 {
-char alphabet;
-for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+int alph = 97;
+while (alph <= 122)
 {
-if (alphabet == 'e' || alphabet == 'q')
+if (alph != 101 && alph != 113)
 {
-continue;
+putchar(alph);
 }
-putchar(alphabet);
+alph++;
 }
-putchar('\n');
+putchar(10);
 return (0);
 }
