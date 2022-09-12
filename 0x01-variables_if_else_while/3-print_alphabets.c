@@ -1,18 +1,22 @@
 #include <stdio.h>
 /**
- * main - entry point
- * Return: Always 0 (successful)
+ * main -start of function
+ * we use ASCII 97-122(a - z), 65-90 (A-Z), 10 = '\n'
+ * Return: 0 if success
  */
 int main(void)
 {
-int a, b, n;
-for (a = 97, n = 1; n < 27; a++, n++)
+int alph = 97;
+while (alph <= 122)
 {
-putchar(a);
+putchar(alph);
+alph++;
 }
-for (b = 65, n = 1; n < 27; b++, n++)
+alph = 65;
+while (alph <= 90)
 {
-putchar(b);
+putchar(alph);
+alph++;
 }
 putchar(10);
 return (0);
