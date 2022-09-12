@@ -1,16 +1,17 @@
 #include <stdio.h>
 /**
- * main - prints all single digit numbers of base 10 with only putchar
- * use the ASCII (48-57) which represents numbers
- * Return: 0
+ * main - print all single digit numbers of base 10
+ * we use ASCII 48-57 (0-9)
+ * Return: 0 if success
  */
 int main(void)
 {
-int i;
-for (i = 48; i < 58; i++)
+int alph = 48;
+while (alph <= 57)
 {
-putchar(i);
+putchar(alph);
+alph++;
 }
-putchar('\n');
+putchar(10);
 return (0);
 }
