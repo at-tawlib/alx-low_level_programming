@@ -5,7 +5,6 @@
  */
 int main(void)
 {
-	int count = 0;
 	long int previous = 1;
 	long int next = 1;
 	long int sum = 1;
