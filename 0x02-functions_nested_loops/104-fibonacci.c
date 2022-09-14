@@ -1,21 +1,22 @@
 #include <stdio.h>
 /**
- * main - print first 50 Fibonacci numbers
+ * main - print first 98 Fibonacci numbers
  * Return: 0 for success
  */
 int main(void)
 {
 	int count = 0;
-	long int previous = 1;
-	long int next = 1;
-	long int sum = 1;
+	unsigned long int previous = 0;
+	unsigned long int next = 0;
+	unsigned long int current = 1;
 
 	while (count < 98)
 	{
-		printf("%lu", sum);
-		previous = sum;
-		sum = sum + next;
-		next = previous;
+		next = previous + current;
+		previous = current;
+		current = next;
+
+		printf("%lu", next);
 
 		if (count < 97)
 		{
