@@ -8,6 +8,7 @@ void rev_string(char *s)
 	int i, j;
 	char temp;
 	char *new = NULL;
+	int len;
 
 	i = 0;
 	j = 0;
@@ -15,18 +16,11 @@ void rev_string(char *s)
 	/** get len of string */
 	for (i = 0; s[i] != '\0'; i++)
 		;
-
-	i--;
-	while (i >= 0)
+	len = i;
+	for (i = 0; i < len / 2; i++)
 	{
 		temp = s[i];
-		new[j] = temp;
-		i--;
-		j++;
-	}
-	new[j] = '\0';
-	for (i = 0; new[i] != '\0'; i++)
-	{
-		*(s + i) = new[i];
+		s[i] = s[len - i - 1];
+		s[len - i - 1] = temp;
 	}
 }
