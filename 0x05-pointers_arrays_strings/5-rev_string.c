@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * rev_string - reverses a string
  * @s: string to reverse
@@ -7,7 +6,6 @@ void rev_string(char *s)
 {
 	int i, j;
 	char temp;
-	char *new = NULL;
 	int len;
 
 	i = 0;
