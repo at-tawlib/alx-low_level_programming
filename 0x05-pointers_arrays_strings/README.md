@@ -19,3 +19,7 @@
 **8-print_array.c** : function that prints `n` elements of an array of integers. Numbers separeted by comma followed by space
 
 **9-strcpy.c** : function that copies the string pointed to by `src`, including the null byte (`0`), to the buffer pointed by `dest`
+
+**100-atoi.c** : converts a string to an integer
+
+**101-keygen.c** : generates random valid passwords for the program `101-crackme`
