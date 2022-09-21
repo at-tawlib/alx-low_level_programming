@@ -10,7 +10,11 @@ int _atoi(char *s)
 
 	number = 0;
 	sign = 1;
-	/** 1 when last value is a number, else 0 **/
+	/**
+	 * last_digit is changed to 1 only after we encounter a digit
+	 * hence, when we encounter a non-digit after that,
+	 * break the loop because the number has ended
+	 */
 	last_digit = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -31,7 +35,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			/** break if current value is not a number **/
+			/** break if current value is not a digit i.e. after last_digit == 1 **/
 			if (last_digit == 1)
 				break;
 			continue;
