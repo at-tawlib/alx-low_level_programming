@@ -5,7 +5,8 @@
  */
 int _atoi(char *s)
 {
-	int i, a, number, sign, last_digit;
+	int i, a, sign, last_digit;
+	unsigned int number;
 
 	number = 0;
 	sign = 1;
