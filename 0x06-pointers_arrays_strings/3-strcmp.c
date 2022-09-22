@@ -1,5 +1,3 @@
-#include <string.h>
-#include <stdio.h>
 /**
  * _strcmp - compares two strings
  * @s1: string to be compared to
