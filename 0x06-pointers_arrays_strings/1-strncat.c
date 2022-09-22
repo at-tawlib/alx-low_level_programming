@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 /**
  * _strncat - concatenates two strings of n bytes
  * @dest: string to concatenate to
