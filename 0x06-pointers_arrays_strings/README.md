@@ -6,3 +6,5 @@
 
 **2-strncpy.c** : function that copies a string without using the standard libraries. 
 >Works exactly like `strncpy`
+
+**101-print_number_old.c** : just like the above but does not use while loop and can't be used for very large numbers
