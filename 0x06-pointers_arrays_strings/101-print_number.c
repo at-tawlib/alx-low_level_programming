@@ -6,30 +6,27 @@
  */
 void print_number(int n)
 {
+	int divisor, digit;
+
+	divisor = 1;
 	if (n < 0)
 	{
 		_putchar('-');
 		n *= -1;
 	}
 
-	if (n >= 1000)
+	/** find the largest divisor of number */
+	while (n / divisor > 9)
 	{
-		_putchar(n / 1000 + '0');
-		_putchar(((n / 100) % 10) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar(n % 10 + '0');
+		divisor *= 10;
 	}
-	else if (n >= 100)
+
+	while (divisor >= 1)
 	{
-		_putchar(n / 100 + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar(n % 10 + '0');
+		digit = n / divisor;
+		_putchar(digit + '0');
+		n %= divisor;
+		divisor /= 10;
 	}
-	else if (n >= 10)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else
-		_putchar(n + '0');
+
 }
