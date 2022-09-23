@@ -10,9 +10,14 @@ char *cap_string(char *s)
 	/** get length of string **/
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		/** check if first word is capitalized **/
+		if (s[0] >= 97 && s[0] <= 122)
+		{
+			s[0] -= 32;
+		}
 		/**
 		 * if char is any of the values, capitalize the next char
-		 * use ASCII value because betty expects less than 90 chars
+		 * use ASCII value because betty expects less than 80 chars
 		 */
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == 10 || s[i] == 44)
 		{
