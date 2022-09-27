@@ -3,24 +3,26 @@
  * finds the occurance of the substring needle in the string haystack
  * @haystack: string to search in
  * @needle: string to search
- * Return: a pointer to the beginning of the located substring 
+ * Return: a pointer to the beginning of the located substring
  */
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
-	char *ptr = 0;
 
-	for (i = 0; needle[i] != '\0'; i++)
+	for (i = 0; haystack[i] > '\0'; i++)
 	{
-		for (j = 0; haystack[j] != '\0'; j++)
+		for (j = i; haystack[j] > '\0' && needle[j - i] > '0'; j++)
 		{
-			if (needle[i] == haystack[j])
+			if (haystack[j] != needle[j - i])
 			{
-				ptr = &haystack[j];
-				return (ptr);
+				break;
 			}
+		}
+		if (needle[j - i] == '\0')
+		{
+			return (haystack + i);
 		}
 	}
 
-	return (ptr);
+	return (0);
 }
