@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * print_diagsums - prints the sum of the two diagonals of suare matrix of integers
+ * print_diagsums - prints the sum of the two diagonals of
+ * square matrix of integers
  * @a: matrix to add
  * @size: size of matrix
  */
