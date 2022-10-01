@@ -4,14 +4,8 @@
 * @c: character to check
 * Return: return 1 for uppercase and 0 for otherwise
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	if (isupper(c))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (c >= 48 && c <= 57);
+
 }
