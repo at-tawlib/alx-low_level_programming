@@ -14,9 +14,7 @@ int main(void)
 	*/
 
 	/** 1-print_rev_recursion.c */
-	/*
 	_print_rev_recursion("\nColton Walker");
-	*/
 
 	/** 2-strlen_recursion.c */
 	/**
@@ -77,6 +75,7 @@ int main(void)
 	*/
 
 	/** 6-is_prime_number.c */
+	/**
     int r;
 
     r = is_prime_number(1);
@@ -95,6 +94,7 @@ int main(void)
     printf("%d\n", r);
     r = is_prime_number(7919);
     printf("%d\n", r);
+	*/
 
     return (0);
 }
