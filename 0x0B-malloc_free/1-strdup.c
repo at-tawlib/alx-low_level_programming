@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strdup - returns a pointer to a dupiclated string
@@ -15,8 +16,8 @@ char *_strdup(char *str)
 	/** get size of str */
 	for (i = 0; str[i] != '\0'; i++)
 		;
-	new_str = malloc(size * sizeof(char) + 1);
 	size = i;
+	new_str = malloc(size * sizeof(char) + 1);
 	if (size == 0)
 		return (NULL);
 	for (i = 0; i < size; i++)
