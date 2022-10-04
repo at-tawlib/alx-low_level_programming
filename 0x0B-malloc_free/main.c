@@ -55,7 +55,8 @@ int main(void)
 	*/
 
 	/** 1-strdup.c */
-	  char *s;
+	/**
+	char *s;
 
     s = _strdup("ALX SE");
     if (s == NULL)
@@ -65,6 +66,18 @@ int main(void)
     }
     printf("%s\n", s);
     free(s);
+	*/
+
+	/** 2-str_concat.c */
+	char *s;
+	s = str_concat("Betty ", "Holberton");
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
 	
 	return (0);
 }
