@@ -39,6 +39,8 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
+	/** 0-create_array.c */
+	/*
 	char *buffer;
 
 	buffer = create_array(98, 'H');
@@ -50,6 +52,19 @@ int main(void)
 
 	simple_print_buffer(buffer, 98);
 	free(buffer);
+	*/
 
+	/** 1-strdup.c */
+	  char *s;
+
+    s = _strdup("ALX SE");
+    if (s == NULL)
+    {
+        printf("failed to allocate memory\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+	
 	return (0);
 }
