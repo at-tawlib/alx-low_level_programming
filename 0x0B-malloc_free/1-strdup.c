@@ -1,7 +1,9 @@
 #include <stdlib.h>
 
 /**
- * _strdup -
+ * _strdup - returns a pointer to a dupiclated string
+* @str: string to copy
+* Return: pointer of copied string
  */
 char *_strdup(char *str)
 {
@@ -13,7 +15,7 @@ char *_strdup(char *str)
 		;
 	size = i;
 
-	new_str = malloc(size * sizeof(char));
+	new_str = malloc(size * sizeof(char) + 1);
 	for (i = 0; i < size; i++)
 		new_str[i] = str[i];
 
