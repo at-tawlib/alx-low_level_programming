@@ -34,9 +34,11 @@ char *argstostr(int ac, char **av)
 	/** get total length of all arguments */
 	for (i = 0; i < ac; i++)
 	{
-		total_length += _strlen(av[i]);
+		/** +1 for adding '\n' */
+		total_length = total_length + _strlen(av[i]) + 1;
 	}
 
+	/** +1 for adding '\0' */
 	new_str = malloc(total_length * sizeof(char) + 1);
 	if (new_str == 0)
 		return (NULL);
