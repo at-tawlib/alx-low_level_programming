@@ -11,6 +11,7 @@
 int main(void)
 {
 	/** 0-malloc_checked.c */
+	/**
 	char *c;
 	int *i;
 	float *f;
@@ -28,6 +29,13 @@ int main(void)
     free(i);
     free(f);
     free(d);
+	*/
 
+	/** 1-string_nconcat.c */
+	char *concat;
+	concat = string_nconcat("Best ", "School !!!", 6);
+	printf("%s\n", concat);
+	free(concat);
+		
 	return (0);
 }
