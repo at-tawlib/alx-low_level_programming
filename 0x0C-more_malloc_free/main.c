@@ -27,6 +27,30 @@ void simple_print_buffer(char *buffer, unsigned int size)
 	}
 	printf("\n");
 }
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void simple_print_buffer2(int *buffer, unsigned int size)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (i % 10)
+			printf(" ");
+		if (!(i % 10) && i)
+			printf("\n");
+		printf("0x%02x", buffer[i]);
+		i++;
+	}
+	printf("\n");
+}
 /**
  * main - check the code
  *
@@ -64,6 +88,7 @@ int main(void)
 	*/
 
 	/** 2-calloc.c */
+	/**
 	char *a;
 	a = _calloc(98, sizeof(char));
 	strcpy(a, "Best");
@@ -71,7 +96,13 @@ int main(void)
 	a[97] = '!';
 	simple_print_buffer(a, 98);
 	free(a);
+	*/
 
+	/** 3-array_range.c */
+	int *a;
+	a = array_range(0, 10);
+	simple_print_buffer2(a, 11);
+	free(a);
 		
 	return (0);
 }
