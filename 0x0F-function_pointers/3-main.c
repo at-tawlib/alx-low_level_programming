@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	/** check if arguments are exactly 4 */
 	if (argc != 4)
 	{
-		printf("Error 98\n");
+		printf("Error\n");
 		exit(98);
 	}
 	/** get numbers and operator */
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	/** check if the right operator has been entered on operator is not NULL */
 	if (!get_op_func(operator))
 	{
-		printf("Error 99\n");
+		printf("Error\n");
 		exit(99);
 	}
 	/** check if first number is divided by 0, or modulus of 0 */
