@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 	/** check if the right operator has been entered on operator is not NULL */
-	if (!get_op_func(operator))
+	if (get_op_func(operator) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
