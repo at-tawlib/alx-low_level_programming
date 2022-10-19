@@ -6,26 +6,42 @@
 int main(void)
 {
 	int count = 0;
-	unsigned long int previous = 0;
-	unsigned long int next = 0;
-	unsigned long int current = 1;
+	unsigned long int i, j, k;
+	unsigned long int m, n, p, carry;
 
-	while (count < 98)
+	i = 0;
+	j = 1;
+	for (count = 1; count <= 91; count++)
 	{
-		next = previous + current;
-		previous = current;
-		current = next;
-
-		printf("%ld", next);
-
-		if (count < 97)
-		{
-			printf(", ");
-		}
+		k = i + j;
+		i  = j;
+		j = k;
+		printf("%lu, ", k);
 		count++;
 	}
 
-	printf("\n");
+	m = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+	while (count <= 98)
+	{
+		carry = (m + n) / 1000;
+		p = (m + n) - carry * 1000;
+		k = (i + j) + carry;
+		m = n;
+		n = p;
+		i = j;
+		j = k;
+		if (p >= 100)
+			printf("%lu%lu", k, p);
+		else
+			printf("%lu0%lu", k, p);
 
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	printf("\n");
 	return (0);
 }
