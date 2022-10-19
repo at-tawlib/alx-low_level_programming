@@ -6,8 +6,8 @@
 int main(void)
 {
 	int count = 0;
-	unsigned long int i, j, k;
-	unsigned long int m, n, p, carry;
+	unsigned long i, j, k;
+	unsigned long m, n, p, carry;
 
 	i = 0;
 	j = 1;
@@ -17,7 +17,6 @@ int main(void)
 		i  = j;
 		j = k;
 		printf("%lu, ", k);
-		count++;
 	}
 
 	m = i % 1000;
