@@ -16,7 +16,7 @@ int main(void)
 		previous = current;
 		current = next;
 
-		printf("%lu", next);
+		printf("%ld", next);
 
 		if (count < 97)
 		{
