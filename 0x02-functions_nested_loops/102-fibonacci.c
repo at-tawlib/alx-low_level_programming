@@ -12,7 +12,7 @@ int main(void)
 
 	while (count < 50)
 	{
-		printf("%lu", sum);
+		printf("%ld", sum);
 		previous = sum;
 		sum = sum + next;
 		next = previous;
