@@ -4,7 +4,8 @@
  * @head: head of list
  * Return: number of nodes in list
  *
- * Description - checks if addresses
+ * Description - checks if mem addresses are sequential to each other
+ * i.e. if diff > 0, mem addresses not close has diff as garbage value
  */
 size_t print_listint_safe(const listint_t *head)
 {
@@ -15,7 +16,6 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		/** check diff of mem addresses */
 		diff = head - head->next;
-		printf("%lu\n", diff);
 		count++;
 		printf("[%p] %d\n", (void *) head, head->n);
 		if (diff > 0)
