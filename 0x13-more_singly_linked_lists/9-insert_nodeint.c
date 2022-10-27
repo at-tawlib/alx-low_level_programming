@@ -31,7 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	cur_node = *head;
 	prev_node = *head;
 	/** traverse to position */
-	for (i = 0; i <= idx && cur_node != NULL; i++)
+	for (i = 0; i <= idx && prev_node != NULL; ++i)
 	{
 		if (i == idx)
 		{
