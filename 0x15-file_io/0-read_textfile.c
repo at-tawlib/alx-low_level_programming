@@ -8,19 +8,23 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	size_t i;
-	char ch;
+	int fileDescriptor, _read, _write;
+	char buff[BUFSIZ];
 
-	fp = fopen(filename, "r");
-	if (fp == NULL || letters == 0 || filename == NULL)
+	if (filename == NULL || letters == 0)
 		return (0);
-	for (i = 0; i < letters && !feof(fp); i++)
-	{
-		ch = fgetc(fp);
-		_putchar(ch);
-	}
+	fileDescriptor = open(filename, O_RDONLY);
+	if (fileDescriptor == -1)
+		return (0);
+	_read = read(fileDescriptor, buff, letters);
+	if (_read == -1)
+		return (0);
+	_write = write(STDOUT_FILENO, buff, _read);
+	if (_write == -1)
+		return (0);
+	if (_read != _write)
+		return (0);
 
-	fclose(fp);
-	return (i);
+	close(fileDescriptor);
+	return (_write);
 }
