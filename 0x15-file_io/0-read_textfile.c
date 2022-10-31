@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0; i < letters && !feof(fp); i++)
 	{
 		ch = fgetc(fp);
-		printf("%c", ch);
+		_putchar(ch);
 	}
 
 	fclose(fp);
