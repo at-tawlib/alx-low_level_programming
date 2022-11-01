@@ -29,8 +29,8 @@ Write a script that runs a C file through the preprocessor and save the result i
 -   The C file name will be saved in the variable  `$CFILE`
 -   The output should be saved in the file  `c`
 > $ export CFILE=main.c
-> $ ./0-preprocessor
-> $ tail c 
+> $ ./0-preprocessor 
+> $ tail c
 
 ### 1.Compiler
 
