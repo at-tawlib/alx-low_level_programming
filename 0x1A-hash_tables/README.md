@@ -80,6 +80,7 @@ Betty:Cool
 c:isfun
 javascript:(null)
 julien@ubuntu:~/0x1A. Hash tables$ 
+```
 
 ## [5-hash_table_print.c](5-hash_table_print.c), [5-main.c](5-main.c)
 has a function that prints a hash table.
@@ -111,6 +112,23 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
 ==6621== 
 ==6621== For counts of detected and suppressed errors, rerun with: -v
 ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x1A. Hash tables$ 
+```
+## [100-sorted_hash_table.c](100-sorted_hash_table.c), [100-main.c](100-main.c)
+
+Rewrite the previous functions using thes ```shash```data structures:
+```
+julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-sorted_hash_table.c 1-djb2.c 2-key_index.c -o sht  
+julien@ubuntu:~/0x1A. Hash tables$ ./sht 
+{'y': '0'}
+{'j': '1', 'y': '0'}
+{'c': '2', 'j': '1', 'y': '0'}
+{'b': '3', 'c': '2', 'j': '1', 'y': '0'}
+{'b': '3', 'c': '2', 'j': '1', 'y': '0', 'z': '4'}
+{'b': '3', 'c': '2', 'j': '1', 'n': '5', 'y': '0', 'z': '4'}
+{'a': '6', 'b': '3', 'c': '2', 'j': '1', 'n': '5', 'y': '0', 'z': '4'}
+{'a': '6', 'b': '3', 'c': '2', 'j': '1', 'm': '7', 'n': '5', 'y': '0', 'z': '4'}
+{'z': '4', 'y': '0', 'n': '5', 'm': '7', 'j': '1', 'c': '2', 'b': '3', 'a': '6'}
 julien@ubuntu:~/0x1A. Hash tables$ 
 ```
 
